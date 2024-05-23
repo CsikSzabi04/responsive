@@ -8,8 +8,8 @@
     <style>
         body { background-color: rgba(0, 0, 0, 0.788); }
         #main { width: 95%;  margin: 5px auto;}
-        .dm { background-color: white; border: 1px solid lightgrey; padding: 5px; margin-bottom: 10px;}
-        h2 { margin: 5px 0px;}
+        .dm { background-color: white; border: 1px solid lightgrey; padding: 5px; margin: 10px;}
+        h2 { margin: 5px;}
         img {width: 100%; height: auto;}
         .hidden {display: none;}
         .row{display: flex;}
@@ -17,14 +17,15 @@
             .left, .middle {
                 float: left;
                 width: 48%;
-                padding: 10px;
+                margin: 10px;
             }
-            .middle {margin-right: 0;}
+            .middle {margin-right: 0px;}
         }
         @media (min-width: 1400px) {
-            .right, .middle, .left {display: inline-block; width: 32%;}
-            .right img {width: calc(50% - 10px); margin: 5px;}
+            .right, .middle, .left {display: inline-block; width: 31%;}
+            .right img {width: 48%; margin: 5px;}
         }
+
     </style>
     <script>
         function menu(){
@@ -89,3 +90,4 @@
     </div>
 </body>
 </html>
+
