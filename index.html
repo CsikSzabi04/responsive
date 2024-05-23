@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellcat</title>
+    <style>
+        body { background-color: rgba(0, 0, 0, 0.788); }
+        #main { width: 95%;  margin: 5px auto;}
+        .dm { background-color: white; border: 1px solid lightgrey; padding: 5px; margin-bottom: 10px;}
+        h2 { margin: 5px 0px;}
+        img {width: 100%; height: auto;}
+        .hidden {display: none;}
+        .row{display: flex;}
+        @media (min-width: 700px) {
+            .left, .middle {
+                float: left;
+                width: 48%;
+                padding: 10px;
+            }
+            .middle {margin-right: 0;}
+        }
+        @media (min-width: 1400px) {
+            .right, .middle, .left {display: inline-block; width: 32%;}
+            .right img {width: calc(50% - 10px); margin: 5px;}
+        }
+    </style>
+    <script>
+        function menu(){
+            let m = document.getElementById("menu");
+            if(m.className == "") m.className = "show"; else m.className = "";
+        }
+
+        function onResize() {
+            document.querySelector("title").innerHTML = "Hellcat " + `(${document.documentElement.clientWidth}px)`;
+        }
+        window.onload = onResize;
+        window.onresize = onResize;
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div class="dm left">
+            <h2>Body Kit</h2>
+            <div>
+                <img src="d1.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+            </div>
+            <div>
+                <img src="d2.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porroLorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?  ?</p>
+            </div>
+        </div>
+        <div class="dm middle">
+            <h2>Inside</h2>
+            <div>
+                <img src="d5.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+            </div>
+            <div>
+                <img src="d6.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sit omnis ratione. Eum atque nam excepturi officiis odit, facilis blanditiis perspiciatis tempore non eos aut mollitia beatae eligendi modi porro?</p>
+            </div>
+        </div>
+        <div class="dm right hidden show">
+            <h2>More picture cause why not</h2>
+            <div class="row"> 
+                <img src="d4.jpg">
+                <img src="d2.jpg">            
+            </div>
+            <div class="row">
+                <img src="d3.jpg">
+                <img src="d4.jpg">            
+            </div>
+            <div class="row">
+                <img src="d2.jpg">
+                <img src="d5.jpg">            
+            </div>
+            <div class="row">
+                <img src="d7.jpeg">
+                <img src="d8.jpg">            
+            </div>
+            <div class="row">
+                <img src="d9.jpg">
+                <img src="d10.jpg">            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
